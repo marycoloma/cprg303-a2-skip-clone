@@ -1,0 +1,12 @@
+export const Colors = {
+  primary: "#F26B0A",
+  background: "#F8F7F5",
+  card: "#FFFFFF",
+  text: "#2B2B2B",
+  textMuted: "#6B6B6B",
+  border: "#E8E6E3",
+  inputBg: "#F2F0ED",
+  peach: "#FDE3CC",
+  successBg: "#B8E6C4",
+  successText: "#1E6B3A",
+};
