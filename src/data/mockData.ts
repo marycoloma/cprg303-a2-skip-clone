@@ -182,6 +182,7 @@ export const RECENT_SEARCHES: string[] = ["shawarma", "pizza"];
 export const POINTS = 10900;
 export const POINTS_VALUE = 10.9;
 export const TOTAL_SAVED = 425.23;
+export const SAVED_LAST_30_DAYS = 38.5;
 
 export const OFFERS: Offer[] = [
   {
