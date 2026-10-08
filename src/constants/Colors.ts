@@ -9,4 +9,9 @@ export const Colors = {
   peach: "#FDE3CC",
   successBg: "#B8E6C4",
   successText: "#1E6B3A",
+  accent: "#F6C445",
+  bannerBlue: "#BFDCE0",
+  offerBg: "#FBE7B5",
+  overlay: "rgba(255, 255, 255, 0.8)",
+  shadow: "#000000",
 };
