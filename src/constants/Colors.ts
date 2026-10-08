@@ -14,4 +14,6 @@ export const Colors = {
   offerBg: "#FBE7B5",
   overlay: "rgba(255, 255, 255, 0.8)",
   shadow: "#000000",
+  watermark: "rgba(0, 0, 0, 0.06)",
+  danger: "#D32F2F",
 };

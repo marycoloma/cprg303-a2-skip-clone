@@ -2,7 +2,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AddressRow from "../../components/AddressRow";
 import CategoryItem from "../../components/CategoryItem";
+import DeliveryToggle from "../../components/DeliveryToggle";
 import FoodTypeTile from "../../components/FoodTypeTile";
 import IconButton from "../../components/IconButton";
 import RestaurantCard from "../../components/RestaurantCard";
@@ -34,12 +36,7 @@ export default function HomeScreen() {
 
         {/* address and sort */}
         <View style={styles.addressRow}>
-          <Pressable style={styles.address}>
-            <Text style={styles.addressText} numberOfLines={1}>
-              {DELIVERY_ADDRESS}
-            </Text>
-            <Ionicons name="chevron-down" size={20} color={Colors.text} />
-          </Pressable>
+          <AddressRow address={DELIVERY_ADDRESS} />
           <Pressable style={styles.sortButton}>
             <Ionicons name="filter" size={18} color={Colors.primary} />
             <Text style={styles.sortText}>Sort</Text>
@@ -101,25 +98,6 @@ export default function HomeScreen() {
 }
 
 // only used on home so it stays in this file
-function DeliveryToggle() {
-  return (
-    <View style={styles.toggle}>
-      <View style={styles.toggleActive}>
-        <Ionicons name="car-outline" size={20} color={Colors.primary} />
-        <Text style={styles.toggleText}>Delivery</Text>
-      </View>
-      <View style={styles.toggleInactive}>
-        <Ionicons
-          name="bag-handle-outline"
-          size={20}
-          color={Colors.textMuted}
-        />
-      </View>
-    </View>
-  );
-}
-
-// only used on home so it stays in this file
 function PromoBanner() {
   return (
     <View style={styles.banner}>
@@ -158,50 +136,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 12,
   },
-  toggle: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: Colors.inputBg,
-    borderRadius: 999,
-    padding: 4,
-    gap: 4,
-  },
-  toggleActive: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    backgroundColor: Colors.card,
-    borderRadius: 999,
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-  },
-  toggleInactive: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-  },
-  toggleText: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: Colors.text,
-  },
   addressRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 16,
     gap: 12,
-  },
-  address: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 4,
-  },
-  addressText: {
-    flexShrink: 1,
-    fontSize: 22,
-    fontWeight: "800",
-    color: Colors.text,
   },
   sortButton: {
     flexDirection: "row",
