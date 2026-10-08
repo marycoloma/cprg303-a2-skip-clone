@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 
 // type for ionicons names
-type IconName = keyof typeof Ionicons.glyphMap;
+export type IconName = keyof typeof Ionicons.glyphMap;
 
 // types
 
